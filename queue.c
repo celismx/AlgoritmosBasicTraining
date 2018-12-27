@@ -17,7 +17,7 @@
 
 void enQueue(int value){
     if(rear == SIZE-1)
-     printf("Nuestro Queue esta lleno\n" );
+        printf("Nuestro Queue esta lleno\n" );
     else {
         if(front == -1)
             front = 0;
@@ -26,6 +26,17 @@ void enQueue(int value){
         printf("Se inserto el valor %d correctamente\n", value);
     
     }
+ 
+}
 
-    
+void deQueue(){
+    if(front == -1)
+        printf("Nuestro Queue esta vacio\n" );
+    else{
+        printf("se elimino el valor %d", values[front]);
+        front++;
+        if(front > rear)
+        front = rear = -1;
+    }
+
 }
