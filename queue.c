@@ -14,6 +14,8 @@
  */
 #include<stdio.h>
 #define SIZE 5
+int values[SIZE], front = -1, rear= -1;
+
 
 void enQueue(int value){
     if(rear == SIZE-1)
@@ -33,10 +35,26 @@ void deQueue(){
     if(front == -1)
         printf("Nuestro Queue esta vacio\n" );
     else{
-        printf("se elimino el valor %d", values[front]);
+        printf("se elimino el valor %d\n", values[front]);
         front++;
         if(front > rear)
         front = rear = -1;
     }
 
+}
+
+main(int argc, char const *argv[])
+{
+    enQueue(1);
+    enQueue(2);
+    enQueue(3);
+    enQueue(4);
+    enQueue(5);
+    deQueue();
+    deQueue();
+    deQueue();
+    deQueue();
+    deQueue();
+    enQueue(10);
+    return 0;
 }
